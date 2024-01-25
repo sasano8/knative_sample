@@ -7,9 +7,9 @@ spec:
   template:
     spec:
       containers:
-      - image: jupyter/base-notebook
-        ports:
-        - containerPort: 8888
-        env:
-          - name: JUPYTER_TOKEN
-            value: "your_token_here"
+        - image: jupyter/base-notebook
+          ports:
+            - containerPort: 8888
+          env:
+            - name: JUPYTER_TOKEN
+              value: "your_token_here"
