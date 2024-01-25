@@ -1,0 +1,15 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: jupyter-notebook
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+      - image: jupyter/base-notebook
+        ports:
+        - containerPort: 8888
+        env:
+          - name: JUPYTER_TOKEN
+            value: "your_token_here"

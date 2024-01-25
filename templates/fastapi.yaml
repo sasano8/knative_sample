@@ -1,0 +1,14 @@
+
+
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: fastapi
+spec:
+  template:
+    spec:
+      containers:
+        - image: asdkant/fastapi-hello-world
+          ports:
+            - containerPort: 5000
+
